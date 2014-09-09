@@ -8,13 +8,12 @@
 </head>
 <body>
 
-<% 
-
-if user is signed in, display link to logout
-if they aren't logged in, display signup AND signin %>
-
-
-<!-- links to view concerns, homepage: research -->
+<% if user_signed_in? %>
+	<%= link_to "Logout", destroy_user_session_path, method: :delete %>
+<% else %>
+	<%= link_to "Sign up", new_user_registration_path %> 
+	<%= link_to "Sign in", new_user_session_path %>
+<% end %>
 
 <%= yield %>
 
