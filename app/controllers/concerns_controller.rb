@@ -1,5 +1,8 @@
 class ConcernsController < ApplicationController
 
+	def index
+	end
+
 	def create
 	end
 
