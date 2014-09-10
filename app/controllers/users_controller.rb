@@ -1,3 +1,3 @@
 class UserController < ActionController::Base
-	has_many :responses, :concerns
+	has_many :concerns
 end
