@@ -1,7 +1,9 @@
-class ConcernsController < ApplicationController	
-	
+class ConcernsController < ApplicationController
+
+before_action :authenticate_user! 
+
 	def index
-		@concerns = Concern.all
+		@concerns = Concern.where(user_id: current_user.id)
 	end
 
 	def new
@@ -10,7 +12,7 @@ class ConcernsController < ApplicationController
 	end
 
 	def create
-		@concern = Concern.new(concern_params) 
+		@concern = Concern.new(concern_params.merge(user_id: current_user.id))
 		if @concern.save
 			redirect_to user_concern_path(current_user, @concern)
 		else
@@ -19,12 +21,18 @@ class ConcernsController < ApplicationController
 	end
 
 	def show
-		@concerns = Concern.find( params[:id] )
+		@concern = Concern.find( params[:id] )
+	end
+
+	def destroy
+		@concern = Concern.find( params[:id] )
+		@concern.destroy
+		redirect_to root_path
 	end
 
 private
   def concern_params
-    params.permit(:to_number)
+    params.require(:concern).permit(:text)
   end
 
 end

@@ -13,3 +13,24 @@
  *= require_tree .
  *= require_self
  */
+
+body {
+	background-color: teal;
+}
+
+div h2 {
+	text-align: center;
+	width: 60%;
+	margin: 0 auto;
+	color: black;
+}
+
+div {
+	width: 60%;
+	margin: 0 auto;
+}
+
+div .concern_form {
+	width: 60%;
+	margin: auto;
+}

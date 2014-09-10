@@ -5,16 +5,28 @@
 	<title></title>
 </head>
 <body>
-	<h2>Welcome to SpeakUp: The Virtual School Suggestion Box that Stops Bullying in its Tracks</h2>
+	<div>
+		<h2>Welcome to SpeakUp:
+		<br>
+		The Virtual Suggestion Box for Students to Log Bullying Concerns</h2>
+	 </div> 
+	 <div>
+		<h3>Bullying: What You Need to Know</h3>
+		<ul>
+			<li>What is bullying?</li>
+			<li>What's the difference between bullying on vs. offline?</li>
+			<li>What to do if you are being bullied</li>
+			<li>What to do if your friend is being bullied</li>
+			<li>What to do if your friend is a bully</li>
+		</ul>
 
-<h3>Bullying: What You Need to Know</h3>
-	<ul>
-		<li>What is bullying?</li>
-		<li>What's the difference between bullying on vs. offline?</li>
-		<li>What to do if you are being bullied</li>
-		<li>What to do if your friend is being bullied</li>
-		<li>What to do if your friend is a bully</li>
-	</ul>
-
+	<h3> All of your Concerns </h3>
+		<ul>
+			<% @concerns.each do |c| %>
+			<li><%= c.text %></li>
+			<% end %>
+		</ul>
+		</div> 
+	</div>
 </body>
 </html>
