@@ -1,0 +1,15 @@
+<%= form_for @concern do |c| %>
+  <% if @concern.errors.any? %>
+   <ul class="errors">
+  	<% @concern.errors.full_messages.each do |c| %>
+  	  <li class="error"><%= e %> </li>
+  	<% end %>
+   </ul>
+   <% end %>
+
+   <%= c.label :concern %>
+   <%= c.text_area :text %>
+  <br>
+  <%= c.submit %>
+<% end %>
+

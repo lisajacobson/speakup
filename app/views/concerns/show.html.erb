@@ -1,0 +1,5 @@
+<h2><%= @concern %></h2>
+<p><%= @concern.text %></p>
+<br>
+<%= link_to 'Delete Question', concern_path(@concern), method: :delete %>
+<%= link_to 'Edit Question', edit_user_concern_path(@concern)%>
