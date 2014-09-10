@@ -81,5 +81,3 @@ test:
 production:
   <<: *default
   database: speak-up_production
-  username: speak-up
-  password: <%= ENV['SPEAK-UP_DATABASE_PASSWORD'] %>
