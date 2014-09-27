@@ -1,0 +1,7 @@
+<h2>Edit your concern here</h2>
+
+	<%= form_for @concern, url: user_concern_path, html: { method: :patch } do |c| %>
+		<%= c.label :concern %>
+		<%= c.text_area :text %>
+		<%= c.submit %>
+	<% end %>

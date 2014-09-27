@@ -11,6 +11,16 @@ before_action :authenticate_user!
 		@concern = Concern.new
 	end
 
+	def edit
+		populate_concern
+	end
+
+	def update
+		populate_concern
+		@concern.update(concern_params)
+		redirect_to root_path
+	end
+
 	def create
 		@concern = Concern.new(concern_params.merge(user_id: current_user.id))
 		if @concern.save
@@ -21,16 +31,21 @@ before_action :authenticate_user!
 	end
 
 	def show
-		@concern = Concern.find( params[:id] )
+		populate_concern
 	end
 
 	def destroy
-		@concern = Concern.find( params[:id] )
+		populate_concern
 		@concern.destroy
 		redirect_to root_path
 	end
 
 private
+
+	def populate_concern
+		@concern = Concern.find( params[:id] )
+	end
+
   def concern_params
     params.require(:concern).permit(:text)
   end

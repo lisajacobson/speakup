@@ -23,9 +23,14 @@
 	<h3> All of your Concerns </h3>
 		<ul>
 			<% @concerns.each do |c| %>
-			<li><%= c.text %></li>
+			<li>
+				<%= link_to 'Edit', edit_user_concern_path(current_user, c.id) %>
+				<%= link_to 'Delete', user_concern_path(current_user, c.id), method: :delete %>
+				<%= c.text %>
+			</li>
 			<% end %>
 		</ul>
+
 		</div> 
 	</div>
 </body>
