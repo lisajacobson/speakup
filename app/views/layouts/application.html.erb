@@ -5,21 +5,18 @@
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
+  <%= favicon_link_tag 'favicon.ico' %>
 </head>
 <body>
 
 <%= alert %>
 <%= notice %>
 
-<% if user_signed_in? %>
-	<%= link_to "Logout", destroy_user_session_path, method: :delete %>
-	<%= link_to "Submit Concern", new_user_concern_path(user_id: current_user.id) %>
-<% else %>
-	<%= link_to "Sign up", new_user_registration_path %> 
-	<%= link_to "Sign in", new_user_session_path %>
-<% end %>
+<%= render 'layouts/header' %>
 
 <%= yield %>
+
+<%= render 'layouts/footer' %>
 
 </body>
 </html>

@@ -1,5 +1,5 @@
 body {
-	background-color: teal;
+	background-color: #1C4BFF;
 }
 
 div h2 {
@@ -19,6 +19,13 @@ div .concern_form {
 	margin: auto;
 }
 
+h2 {
+	margin-left: 185px;
+}
+
+.logo{
+	background-image: url(assets/images/speakupLogo.jpg);
+}
 /*
  * This is a manifest file that'll be compiled into application.css, which will include all the files
  * listed below.

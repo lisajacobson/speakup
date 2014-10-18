@@ -6,19 +6,25 @@
 </head>
 <body>
 	<div>
-		<h2>Welcome to SpeakUp:
-		<br>
-		The Virtual Suggestion Box for Students to Log Bullying Concerns</h2>
+		<h2 class="logo"><img src="assets/images/speakupLogo.tiff"></h2>
+		<h2>The Virtual Suggestion Box for Students to Log Bullying Concerns</h2>
 	 </div> 
-	 <div>
-		<h3>Bullying: What You Need to Know</h3>
-		<ul>
-			<li>What is bullying?</li>
-			<li>What's the difference between bullying on vs. offline?</li>
-			<li>What to do if you are being bullied</li>
-			<li>What to do if your friend is being bullied</li>
-			<li>What to do if your friend is a bully</li>
-		</ul>
+	 
+		<div class="box-1">
+			<h3>What is bullying?</h3>
+			Bullying is unwanted, aggressive behavior among school aged children that involves a real or perceived power imbalance. The behavior is repeated, or has the potential to be repeated, over time. Bullying includes actions such as making threats, spreading rumors, attacking someone physically or verbally, and excluding someone from a group on purpose.
+		</div>
+			
+		<div class="box-2">
+			<h3>What is cyber bullying?</h3>
+			Cyberbullying is bullying that takes place using electronic technology. Examples of cyberbullying include mean text messages or emails, rumors sent by email or posted on social networking sites, and embarrassing pictures, videos, websites, or fake profiles.
+		</div>
+
+
+		<div class="box-3">
+			<h3>What to do if you are being bullied</h3>
+			<%= link_to 'Click here', new_user_concern_path(current_user)%> to report a bullying incident to your school counselor and or administrator.
+		</div>
 
 	<h3> All of your Concerns </h3>
 		<ul>
