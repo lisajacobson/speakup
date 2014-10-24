@@ -5,39 +5,39 @@
 	<title>SpeakUp</title>
 </head>
 <body>
-	<div>
-		<h2 class="logo"><img src="assets/images/speakupLogo.tiff"></h2>
-		<h2>The Virtual Suggestion Box for Students to Log Bullying Concerns</h2>
-	 </div> 
+
+		<div class="homepage">
+
+			<h2 class="logo"><img src="assets/images/speakupLogo.tiff"></h2>
 	 
 		<div class="box-1">
-			<h3>What is bullying?</h3>
-			Bullying is unwanted, aggressive behavior among school aged children that involves a real or perceived power imbalance. The behavior is repeated, or has the potential to be repeated, over time. Bullying includes actions such as making threats, spreading rumors, attacking someone physically or verbally, and excluding someone from a group on purpose.
+			<h3>Bullying |ˈbo͝olē|</h3>
+			Unwanted, aggressive behavior involving a real or perceived power imbalance that encompasses threatening behavior, spreading rumors, attacking someone physically or verbally, and intentionally excluding someone from a group.
 		</div>
 			
 		<div class="box-2">
-			<h3>What is cyber bullying?</h3>
-			Cyberbullying is bullying that takes place using electronic technology. Examples of cyberbullying include mean text messages or emails, rumors sent by email or posted on social networking sites, and embarrassing pictures, videos, websites, or fake profiles.
+			<h3>Cyberbullying |ˌsībərˈbo͝olēiNG|</h3>
+			is bullying via electronic technology, including but not limited to mean comments and rumor-spreading via text message, email, and social media.
 		</div>
-
 
 		<div class="box-3">
-			<h3>What to do if you are being bullied</h3>
-			<%= link_to 'Click here', new_user_concern_path(current_user)%> to report a bullying incident to your school counselor and or administrator.
+			<h3>If you are being bullied, <%= link_to 'click here', new_user_concern_path(current_user)%> to report it.</h3>
 		</div>
 
-	<h3> All of your Concerns </h3>
-		<ul>
-			<% @concerns.each do |c| %>
-			<li>
-				<%= link_to 'Edit', edit_user_concern_path(current_user, c.id) %>
-				<%= link_to 'Delete', user_concern_path(current_user, c.id), method: :delete %>
-				<%= c.text %>
-			</li>
-			<% end %>
-		</ul>
+		<div class="right-sidebar">
+			<h3> Your Logged Concerns </h3>
+				<ul>
+					<% @concerns.each do |c| %>
+					<li>
+						<%= link_to 'Edit', edit_user_concern_path(current_user, c.id) %>
+						<%= link_to 'Delete', user_concern_path(current_user, c.id), method: :delete %>
+						<%= c.text %>
+					</li>
+					<% end %>
+				</ul>
+		</div>
 
-		</div> 
 	</div>
+
 </body>
 </html>

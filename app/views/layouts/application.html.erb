@@ -2,21 +2,32 @@
 <html>
 <head>
   <title>SpeakUp</title>
+  <link href='http://fonts.googleapis.com/css?family=Patua+One' rel='stylesheet' type='text/css'>
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
   <%= favicon_link_tag 'favicon.ico' %>
+
 </head>
+
 <body>
 
-<%= alert %>
-<%= notice %>
+<div class="wrapper">
 
-<%= render 'layouts/header' %>
+	<%= alert %>
+	<%= notice %>
 
-<%= yield %>
+	<%= render 'layouts/header' %>
 
-<%= render 'layouts/footer' %>
+	<%= yield %>
+
+	</div class="push"></div>
+
+</div>
+
+<div class="footer">
+	<%= render 'layouts/footer' %>
+</div>
 
 </body>
 </html>
