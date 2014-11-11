@@ -7,8 +7,6 @@
 <body>
 
 		<div class="homepage">
-
-			<h2 class="logo"><img src="assets/images/speakupLogo.tiff"></h2>
 	 
 		<div class="box-1">
 			<h3>Bullying |ˈbo͝olē|</h3>
@@ -25,19 +23,19 @@
 		</div>
 
 		<div class="right-sidebar">
-			<h3> Your Logged Concerns </h3>
-				<ul>
-					<% @concerns.each do |c| %>
-					<li>
-						<%= link_to 'Edit', edit_user_concern_path(current_user, c.id) %>
-						<%= link_to 'Delete', user_concern_path(current_user, c.id), method: :delete %>
-						<%= c.text %>
-					</li>
-					<% end %>
-				</ul>
+			<h3 class="always-here">Your Logged Concerns</h3>
+				<div class="im-here">
+					<ul>
+						<% @concerns.each do |c| %>
+						<li>
+							<%= link_to 'Edit', edit_user_concern_path(current_user, c.id) %>
+							<%= link_to 'Delete', user_concern_path(current_user, c.id), method: :delete %>
+							<%= c.text %>
+						</li>
+						<% end %>
+					</ul>
+				</div>
 		</div>
-
-	</div>
 
 </body>
 </html>

@@ -137,6 +137,14 @@ footer{
 	}
 }
 
+.always-here{
+	display: none;
+}
+
+.im-here ~ .always-here{
+	display: block;
+}
+
 .logo{
 	background-image: url(assets/images/speakupLogo.jpg);
 }
