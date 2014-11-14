@@ -3,7 +3,11 @@ class ConcernsController < ApplicationController
 before_action :authenticate_user! 
 
 	def index
-		@concerns = Concern.where(user_id: current_user.id)
+		if current_user.admin
+			@concerns = Concern.all
+		else
+			@concerns = current_user.concerns
+		end
 	end
 
 	def new
@@ -24,7 +28,7 @@ before_action :authenticate_user!
 	def create
 		@concern = Concern.new(concern_params.merge(user_id: current_user.id))
 		if @concern.save
-			redirect_to user_concern_path(current_user, @concern)
+			redirect_to root_path
 		else
 			render 'new'
 		end
