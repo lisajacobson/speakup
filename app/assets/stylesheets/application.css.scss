@@ -5,7 +5,7 @@
 @mixin submit-button{
 	border-radius: 5px;
 	background-color: #F7F1E8;
-	border: 1px solid #C13D45;
+	border: 1px solid #182B49;
 	padding: 3px;
 	margin-top: 5px;
 	width: 60px;
@@ -14,7 +14,7 @@
 
 .homepage{
  margin: 0 auto;
- border: 2px solid #C13D45;
+ border: 2px solid #182B49;
  width: 75%;
  padding-bottom: 50px;
 }
@@ -29,9 +29,9 @@
 }
 
 .footer{
-	background-color: #F7F1E8;
+	background-color: #DEE7EF;
 	a{
-		color: #C13D45;
+		color: #000063;
 	}
 }
 
@@ -41,17 +41,20 @@
 
 html, body{
 	height: 100%;
-	background-color: #3B60B0;
+	background-color: #DEE7EF;
 	font-family: 'Patua One';
+	color: #182B49;
 	a{
 		text-decoration: none;
+	}
+	h3{
+		 color: #006666;
 	}
 }
 
 header{
 	width: 75%;
 	margin: 0 auto;
-	border-bottom: 2px solid #C13D45;
 	.left-header{
 		float: left;
 	}
@@ -66,6 +69,10 @@ header{
 footer{
 	margin-top: 20px;
 	width: 75%;
+	p{
+		text-align: center;
+		padding-left: 250px;
+	}
 }
 
 // forms
@@ -134,6 +141,9 @@ footer{
 	h3{
 		text-align: center;
 		margin-bottom: 5px;
+		.click_here{
+			color: #2E658A;
+		}
 	}
 }
 
@@ -149,6 +159,14 @@ footer{
 	background-image: url(assets/images/speakupLogo.jpg);
 }
 
+:link{
+	background-color: #DEE7EF;
+	color: #006699;
+}
+
+:visited{
+	color: #FF9900;
+}
 
 /*
  * This is a manifest file that'll be compiled into application.css, which will include all the files
