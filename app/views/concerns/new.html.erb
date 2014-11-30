@@ -1,7 +1,13 @@
 <div class="concern_form">
+  
+  <h2>Create your concern here</h2>
+
   <%= form_for [@user, @concern] do |f| %>
-  	<%= f.label :concern %>
   	<%= f.text_area :text %>
   	<%= f.submit %>  
-    <% end %> 
+  <% end %> 
+
+  <%= image_tag "sign.png" %>
+
 </div>
+
