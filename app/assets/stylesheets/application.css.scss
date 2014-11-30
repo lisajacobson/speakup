@@ -112,6 +112,30 @@ footer{
 	}
 }
 
+.concern_form{
+	margin: 0 auto;
+	width: 392px;
+	height: 100px;
+	padding: 20px;
+	margin-top: 5%;
+	h2{
+		margin-left: 14%;
+		letter-spacing: 1px;
+		padding-bottom: 10px;
+	}
+	textarea{
+		width: 35em;
+		height: 15em;
+		border-radius: 5px;
+	}
+	input[type="submit"]{
+		@include submit-button;
+		width: 10em;
+		height: 2.5em;
+		margin-left: 13em;
+	}
+}
+
 .box-1{
 	margin-top: 1.5em;
 }
