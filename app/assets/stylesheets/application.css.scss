@@ -15,8 +15,9 @@
 .homepage{
  margin: 0 auto;
  border: 2px solid #182B49;
- width: 75%;
+ max-width: 75%;
  padding-bottom: 50px;
+ white-space: normal;
 }
 
 .wrapper{
@@ -66,6 +67,10 @@ header{
 	}
 }
 
+.options{
+	margin-top: .5em;
+}
+
 footer{
 	margin-top: 20px;
 	width: 75%;
@@ -107,11 +112,15 @@ footer{
 	}
 }
 
+.box-1{
+	margin-top: 1.5em;
+}
+
 .box-1,
 .box-2{
 	width: 45%;
 	float: left;
-	margin: 0 auto;
+	// margin: 0 auto;
 	padding: 1em;
 	text-align: justify;
 	display: inline-block;
